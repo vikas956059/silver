@@ -9,5 +9,5 @@ pipelines:
           - vendor/bin/phpunit
 
           - apt-get -qq install git-ftp
-	  - git ftp init --user $FTP_USERNAME --passwd $FTP_PASSWORD $FTP_HOST_PATH
+          - git ftp init --user $FTP_USERNAME --passwd $FTP_PASSWORD $FTP_HOST_PATH
 
