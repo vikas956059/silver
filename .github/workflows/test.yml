@@ -11,6 +11,6 @@ jobs:
     - name: FTP-Deploy-Action
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
-        server: ftp://35.154.247.66
+        server: 35.154.247.66
         username: awsftpuser
         password: 1234
