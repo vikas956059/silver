@@ -1,6 +1,7 @@
 on: push
 name: Transfer Files
 jobs:
+<<<<<<< HEAD
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
     runs-on: ubuntu-latest
@@ -14,3 +15,15 @@ jobs:
         ftp-server: ftp://35.154.247.66
         ftp-username: awsftpuser
         ftp-password: 12345
+=======
+  deploy:
+   runs-on: ubuntu-latest
+
+   steps:
+      - uses: actions/checkout@v2
+      - name: ftp deploy
+        env:
+          ftp-server: ftp://35.154.247.66
+          ftp-username: awsftpuser
+          ftp-password: 1234
+>>>>>>> c91b143f65a9b69fe8a664470ff448102883fd7a
