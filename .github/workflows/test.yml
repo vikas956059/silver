@@ -1,30 +1,16 @@
-on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
-
+on: push
+name: 🚀 Deploy website on push
 jobs:
-  build:
-    name: build
-    runs-on: ubuntu-latest
-
-
   web-deploy:
-    name: web-deploy
-    needs: build
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Get latest code
-        uses: actions/checkout@v2.3.2
-      - name: Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
-        with:
-          server: 35.154.247.66
-          username: awsftpuser
-          password: 1234
-          protocol: ftps
-          local-dir: ./
-          server-dir: ./etc/httpd/
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: 35.154.247.66
+        username: awsftpuser
+        password: 1234
