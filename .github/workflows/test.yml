@@ -1,18 +1,16 @@
-on:
-  push:
-    branches: [ main ]      
-
-
+on: push
+name: Transfer Files
 jobs:
-  deploy:
-   runs-on: ubuntu-latest
-
-   steps:
-      - uses: actions/checkout@v2
-      - name: ftp deploy
-      - uses: easingthemes/ssh-deploy@v2.1.4
-
-        env:
-          ftp-server: ftp://35.154.247.66
-          ftp-username: awsftpuser
-          ftp-password: 1234
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2.1.0
+      with:
+        fetch-depth: 2
+    - name: FTP-Deploy-Action
+      uses: SamKirkland/FTP-Deploy-Action@3.1.1
+      with:
+        ftp-server: ftp://35.154.247.66
+        ftp-username: awsftpuser
+        ftp-password: 12345
