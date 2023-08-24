@@ -14,3 +14,5 @@ jobs:
         server: 35.154.247.66
         username: awsftpuser
         password: 1234
+        local-dir: ./
+        server-dir: ./etc/httpd/
