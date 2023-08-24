@@ -1,0 +1,18 @@
+on:
+  push:
+    branches: [ main ]      
+
+
+jobs:
+  deploy:
+   runs-on: ubuntu-latest
+
+   steps:
+      - uses: actions/checkout@v2
+      - name: ftp deploy
+      - uses: easingthemes/ssh-deploy@v2.1.4
+
+        env:
+          ftp-server: ftp://35.154.247.66
+          ftp-username: awsftpuser
+          ftp-password: 1234
