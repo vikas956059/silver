@@ -1,18 +1,31 @@
-on: push
-name: Transfer Files
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
 jobs:
-  FTP-Deploy-Action:
-    name: FTP-Deploy-Action
+  build:
+    name: build
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ./
+
+  web-deploy:
+    name: web-deploy
+    needs: build
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-      with:
-        fetch-depth: 2
-    - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@4.0.0
-      with:
-        server: 35.154.247.66
-        username: awsftpuser
-        password: 1234
-        local-dir: ./
-        server-dir: ./etc/httpd/
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: 35.154.247.66
+          username: awsftpuser
+          password: 1234
+          protocol: ftps
+          local-dir: ./
+          server-dir: ./etc/httpd/
