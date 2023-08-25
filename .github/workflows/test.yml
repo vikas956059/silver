@@ -3,7 +3,7 @@ jobs:
   deploy:
     name: ssh deploy
     runs-on: ubuntu-latest
-    setps:
+    steps:
      - name: file compile
      - uses: actions/checkout@v3
 
