@@ -11,6 +11,6 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server: 35.154.247.66
+        server: 3.109.184.32 
         username: awsftpuser
-        password: 1234
+        password: ${{ secrets.ftp_password }}
