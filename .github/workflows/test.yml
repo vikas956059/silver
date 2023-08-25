@@ -15,3 +15,4 @@ jobs:
         REMOTE_USER: ec2-user
         SOURCE: "./"
         TARGET: /home/ec2-user
+        EXCLUDE: "/silver/"  
