@@ -1,6 +1,6 @@
 on: push
 jobs:
-  ssh_deploy:
+  deploy:
     name: ssh deploy
     runs-on: ubuntu
     setps:
