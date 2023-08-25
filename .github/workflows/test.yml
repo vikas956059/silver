@@ -4,14 +4,14 @@ jobs:
     name: ssh deploy
     runs-on: ubuntu
     setps:
-     name: file compile
-     uses: action/checkout@v3
+     - name: file compile
+     - uses: action/checkout@v3
 
-     name: sycn files
-     uses: easingthemes/ssh-deploy@main
-     with: 
-       SSH_PRIVATE_KEY: ${{ secrets.SECRETS }}
-       REMOTE_HOST: 3.109.184.32
-       REMOTE_HOST: root
-       SOURCE: "./"
-       TARGET: /var/www/html
+     - name: sycn files
+     - uses: easingthemes/ssh-deploy@main
+       with: 
+        SSH_PRIVATE_KEY: ${{ secrets.SECRETS }}
+        REMOTE_HOST: 3.109.184.32
+        REMOTE_HOST: root
+        SOURCE: "./"
+        TARGET: /var/www/html
