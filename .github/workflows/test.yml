@@ -12,6 +12,6 @@ jobs:
        with:
         SSH_PRIVATE_KEY: ${{ secrets.SECRETS }}
         REMOTE_HOST: 3.109.184.32
-        REMOTE_USER: root
+        REMOTE_USER: ec2-user
         SOURCE: "./"
         TARGET: /var/www/html
