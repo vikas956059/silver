@@ -8,7 +8,7 @@ jobs:
      uses: action/checkout@v3
 
      name: sycn files
-     uses: asingthemes/ssh-deploy@main
+     uses: easingthemes/ssh-deploy@main
      with: 
        SSH_PRIVATE_KEY: ${{ secrets.SECRETS }}
        REMOTE_HOST: 3.109.184.32
