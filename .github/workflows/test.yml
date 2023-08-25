@@ -13,4 +13,5 @@ jobs:
       with:
         server: 3.109.184.32 
         username: awsftpuser
-        password: ${{ secrets.ftp_password }}
+        password: Vikas@123
+#        password: ${{ secrets.ftp_password }}
