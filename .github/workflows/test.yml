@@ -12,6 +12,6 @@ jobs:
        with:
         SSH_PRIVATE_KEY: ${{ secrets.SECRETS }}
         REMOTE_HOST: 3.109.184.32
-        REMOTE_HOST: root
+        REMOTE_USER: root
         SOURCE: "./"
         TARGET: /var/www/html
