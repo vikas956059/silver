@@ -12,9 +12,11 @@
 ~H
 # Command Line History (newest to oldest):
 :q!
-|2,0,1693292079,,"q!"
+|2,0,1693915867,,"q!"
+:q
+|2,0,1693915865,,"q"
 :wq!
-|2,0,1692964771,,"wq!"
+|2,0,1693915859,,"wq!"
 
 # Search String History (newest to oldest):
 
@@ -27,18 +29,31 @@
 # Registers:
 
 # File marks:
-'0  1  605  ~/.ssh/authorized_keys
-|4,48,1,605,1693292079,"~/.ssh/authorized_keys"
+'0  1  0  ~/remote
+|4,48,1,0,1693915867,"~/remote"
 '1  1  605  ~/.ssh/authorized_keys
-|4,49,1,605,1692964771,"~/.ssh/authorized_keys"
+|4,49,1,605,1693292079,"~/.ssh/authorized_keys"
+'2  1  605  ~/.ssh/authorized_keys
+|4,50,1,605,1692964771,"~/.ssh/authorized_keys"
 
 # Jumplist (newest first):
+-'  1  0  ~/remote
+|4,39,1,0,1693915867,"~/remote"
+-'  1  605  ~/.ssh/authorized_keys
+|4,39,1,605,1693292079,"~/.ssh/authorized_keys"
 -'  1  605  ~/.ssh/authorized_keys
 |4,39,1,605,1693292079,"~/.ssh/authorized_keys"
 -'  1  605  ~/.ssh/authorized_keys
 |4,39,1,605,1692964771,"~/.ssh/authorized_keys"
+-'  1  605  ~/.ssh/authorized_keys
+|4,39,1,605,1692964771,"~/.ssh/authorized_keys"
 
 # History of marks within files (newest to oldest):
+
+> ~/remote
+	*	1693915865	0
+	"	1	0
+	^	1	0
 
 > ~/.ssh/authorized_keys
 	*	1693292079	0
